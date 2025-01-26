@@ -4,7 +4,7 @@
             <a href="{{route('admin-user.index')}}" class="btn btn-primary f-14"><i class="fas fa-long-arrow-alt-left"></i> Back</a>
         </div> 
         <div class="card mt-3">
-           <div class="card-header py-3"><h5>Create Admin User</h5></div>
+           <div class="card-header py-3 "><h5>Create Admin User</h5></div>
            <div class="card-body">
             <form id="submitform" method="post">
                 @csrf
