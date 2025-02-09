@@ -41,13 +41,13 @@
             <div class="card-body">             
                   <div class="row">
                       <div class="col-md-12">                    
-                          <x-form labelname="Meta Title" name="meta_title">
+                          <x-form labelname="Meta Title" name="meta_title" :danger=false>
                              <input type="text" name="meta_title" class="form-control f-14" placeholder="Meta Title"/>
                           </x-form>
-                          <x-form labelname="Meta Keywords" name="meta_keywords">
+                          <x-form labelname="Meta Keywords" name="meta_keywords" :danger=false>
                             <input type="text" name="meta_keywords" class="form-control f-14" placeholder="Meta Keywords"/>
                          </x-form>
-                         <x-form labelname="Meta Description" name="meta_desc">
+                         <x-form labelname="Meta Description" name="meta_desc" :danger=false>
                             <input type="text" name="meta_desc" class="form-control f-14" placeholder="Meta Description"/>
                          </x-form>                    
                       </div>                        

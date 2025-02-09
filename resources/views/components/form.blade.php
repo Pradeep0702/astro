@@ -1,9 +1,9 @@
-@php
-    $socialMediaKeys = ['fb', 'yt', 'insta', 'ld', 'pt', 'tw'];
-@endphp
+@props([
+    'danger' => true
+])
 <div class="mb-3">
     <label class="form-label">{{$labelname}} 
-      @if($danger == true)
+      @if($danger)
       <span class='text-danger'>*</span>
       @endif
     </label>
