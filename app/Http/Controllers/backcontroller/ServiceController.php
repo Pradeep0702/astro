@@ -15,7 +15,7 @@ class ServiceController extends Controller
         return view('admin/service/index');
     }
    
-    public function create(){
+    public function create(){ 
         $categories = ServiceCategoryModel::orderBy('order')->get();
         return view('admin/service/create',compact('categories'));
     }
@@ -55,49 +55,20 @@ class ServiceController extends Controller
             $validation = Validator::make($request->all(),[
                'cat_id' => 'required ',
                'menu_name' => 'required | string | unique:service_page,menu_name',
-               'icon'=>'required',
 
-               'meta_title' => 'required|string|max:255',
-               'meta_keywords' => 'required|string|max:255',
-               'meta_desc' => 'required|string|max:500',
+               'page_banner_image' => 'nullable|file|mimes:jpeg,png,jpg,webp|max:2048',
+               'page_banner_title' => 'nullable|string|max:255',
+               'page_banner_subtitle' => 'nullable|string|max:255',
+               'page_banner_description' => 'nullable|string|max:500',
 
-               'page_title' => 'required|string|max:255',
-               'page_description' => 'required|string|max:500',
-
-               'section_heading' => 'required|string|max:255', 
-
-               'card_icon_1' => 'required',
-               'card_title_1' => 'required|string|max:255',
-               'card_description_1' => 'required|string|max:500',
-               'card_icon_2' => 'required',
-               'card_title_2' => 'required|string|max:255',
-               'card_description_2' => 'required|string|max:500',
-               'card_icon_3' => 'required',
-               'card_title_3' => 'required|string|max:255',
-               'card_description_3' => 'required|string|max:500',
-
-               'page_banner_image' => 'required|file|mimes:jpeg,png,jpg,webp|max:2048',
-               'page_banner_title' => 'required|string|max:255',
-               'page_banner_subtitle' => 'required|string|max:255',
-               'page_banner_description' => 'required|string|max:500',
-
-               'center.*.banner_image' => 'required|string|max:255',
-               'center.*.subtitle' => 'required|string|max:255',
-               'center.*.title' => 'required|string|max:255',
-               'center.*.description' => 'required|string|max:500',              
+               'center.*.banner_image' => 'nullable|file|mimes:jpeg,png,jpg,webp|max:2048',
+               'center.*.subtitle' => 'nullable|string|max:255',
+               'center.*.title' => 'nullable|string|max:255',
+               'center.*.description' => 'nullable|string|max:500',
                
-               'faq.*.q' => 'required',   
-               'faq.*.ans' => 'required',            
-           ], 
-           [
-            'center.*.banner_image' => 'Banner Image is required.',
-            'center.*.subtitle.required' => 'Subtitle is required.',
-            'center.*.title.required' => 'Title is required.',
-            'center.*.description.required' => 'Description is required.',
-            'faq.*.q.required' => 'Question is required.',
-            'faq.*.ans.required' => 'Answer is required.',
-            
-          ]);
+           ],[
+            'cat_id' => 'The Category filed is required',
+           ]);
 
            if ($validation->fails()) {
                return response()->json(['code' => '400', 'message' => $validation->errors(), ]);
@@ -107,19 +78,19 @@ class ServiceController extends Controller
             $faq_section=[];
          
             foreach($request->center as $data){
-                $filename = fileupload('service',$data['banner_image']);
+                $filename = isset($data['banner_image']) ? fileupload('service', $data['banner_image']) : "";
                 $main_section[] = [
-                    'title'=>$data['title'],
-                    'subtitle'=>$data['subtitle'],
-                    'description'=>$data['description'],
+                    'title'=>$data['title']  ?? "",
+                    'subtitle'=>$data['subtitle']  ?? "",
+                    'description'=>$data['description']  ?? "",
                     'image'=>$filename
                 ]; 
             }
 
             foreach($request->faq as $data){
                 $faq_section[] = [
-                    'q'=>$data['q'],
-                    'ans'=>$data['ans'],                 
+                    'q'=>$data['q']  ?? "",
+                    'ans'=>$data['ans']  ?? "",                 
                 ]; 
             }
 
@@ -129,37 +100,37 @@ class ServiceController extends Controller
                 'menu_icon'=>$request->icon,
                 'menu_slug'=>str::slug($request->menu_name),
                 'meta_data'=>[
-                    'title'=>$request->meta_title,
-                    'keywords'=>$request->meta_keywords,
-                    'des'=>$request->meta_desc
+                    'title'=>$request->meta_title ?? "",
+                    'keywords'=>$request->meta_keywords  ?? "",
+                    'des'=>$request->meta_desc  ?? "",
                 ],
                 'hero_section'=>[
-                    'title'=>$request->page_title,
-                    'description'=>$request->page_description,
+                    'title'=>$request->page_title  ?? "",
+                    'description'=>$request->page_description  ?? "",
                 ],
                 'info_card_section'=>[
-                     'heading'=>$request->section_heading,
+                     'heading'=>$request->section_heading  ?? "",
                      'card1'=>[
-                        'icon'=>$request->card_icon_1,
-                        'title'=>$request->card_title_1,
-                        'description'=>$request->card_description_1
+                        'icon'=>$request->card_icon_1  ?? "",
+                        'title'=>$request->card_title_1  ?? "",
+                        'description'=>$request->card_description_1  ?? ""
                      ],
                      'card2'=>[
-                        'icon'=>$request->card_icon_2,
-                        'title'=>$request->card_title_2,
-                        'description'=>$request->card_description_2
+                        'icon'=>$request->card_icon_2  ?? "",
+                        'title'=>$request->card_title_2 ?? "",
+                        'description'=>$request->card_description_2  ?? ""
                      ],
                      'card3'=>[
-                        'icon'=>$request->card_icon_3,
-                        'title'=>$request->card_title_3,
-                        'description'=>$request->card_description_3
+                        'icon'=>$request->card_icon_3  ?? "",
+                        'title'=>$request->card_title_3  ?? "",
+                        'description'=>$request->card_description_3  ?? ""
                      ]
                  ],
                 'page_banner_section'=>[
-                    'image'=>fileupload('service',$request->page_banner_image),
-                    'title'=>$request->page_banner_title,
-                    'subtitle'=>$request->page_banner_subtitle,
-                    'description'=>$request->page_banner_description,                    
+                    'image'=> isset($request->page_banner_image) ? fileupload('service',$request->page_banner_image) : "",
+                    'title'=>$request->page_banner_title  ?? "",
+                    'subtitle'=>$request->page_banner_subtitle  ?? "",
+                    'description'=>$request->page_banner_description  ?? "",                    
                 ],
                 'main_section'=>$main_section,
                 'faq_section'=>$faq_section 
@@ -237,7 +208,6 @@ class ServiceController extends Controller
         $update = $service->update([
             'cat_id' => $request->cat_id,
             'menu_name' => $request->menu_name,
-            'menu_icon'=>$request->icon,
             'menu_slug' => str::slug($request->menu_name),
             'meta_data' => [
                 'title' => $request->meta_title,

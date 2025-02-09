@@ -34,8 +34,8 @@
                         <x-form labelname="Menu Icon Code" name="icon">
                             <input type="text" id="text" name="icon" class="form-control f-14"/>
                          </x-form> 
-                         <span>icon Code here : <a href="https://fontawesome.com/v6/search" target="_blank">Link</a></span>
-                     </div>                      
+                         <span>icon Code here : <a href="https://fontawesome.com/v6/search" target="_blank">Link 1 </a> <a href="https://icons.getbootstrap.com/" target="_blank">Link 2 </a></span>
+                        </div>                      
                  </div>
                  <button class="btn btn-primary f-14" id="submitbtn">Submit <i class="fas fa-long-arrow-alt-right"></i></button>
               </form>              

@@ -11,11 +11,13 @@ class form extends Component
     
     public $labelname;
     public $name;
+    public $danger;
 
-    public function __construct($labelname,$name)
+    public function __construct($labelname,$name,$danger=true)
     {
         $this->labelname = $labelname;
         $this->name = $name;
+        $this->danger = $danger;
     }
 
     /**

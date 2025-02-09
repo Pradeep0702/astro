@@ -3,7 +3,7 @@
 @endphp
 <div class="mb-3">
     <label class="form-label">{{$labelname}} 
-      @if(!in_array($name, $socialMediaKeys))
+      @if($danger == true)
       <span class='text-danger'>*</span>
       @endif
     </label>

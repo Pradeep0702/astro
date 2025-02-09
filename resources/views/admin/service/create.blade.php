@@ -19,13 +19,7 @@
                              @endforeach
                             </select>
                           </x-form>                                          
-                      </div> 
-                      <div class="col-md-12">
-                        <x-form labelname="Menu icon" name="icon">
-                           <input type="text" name="icon" class="form-control f-14" placeholder=""/>
-                        </x-form>
-                        <span>icon Code here : <a href="https://fontawesome.com/v6/search" target="_blank">Link 1 </a> <a href="https://icons.getbootstrap.com/" target="_blank">Link 2 </a></span>
-                     </div>                       
+                      </div>                                           
                   </div>                       
             </div>
          </div>
@@ -65,10 +59,10 @@
            <div class="card-body">             
                  <div class="row">
                      <div class="col-md-12">                    
-                         <x-form labelname="Page Title" name="page_title">
+                         <x-form labelname="Page Title" name="page_title" :danger=false>
                             <input type="text" name="page_title" class="form-control f-14" placeholder="Page Title"/>
                          </x-form>
-                         <x-form labelname="Page Description" name="page_description">                         
+                         <x-form labelname="Page Description" name="page_description" :danger=false>                         
                             <textarea name="page_description" class="form-control f-14"></textarea>
                          </x-form>
                      </div>                        
@@ -80,40 +74,40 @@
             <div class="card-body">             
                   <div class="row">
                       <div class="col-md-12">                    
-                          <x-form labelname="Section Heading" name="section_heading">
+                          <x-form labelname="Section Heading" name="section_heading" :danger=false>
                              <input type="text" name="section_heading" class="form-control f-14" placeholder="Section Heading"/>
                           </x-form>
                           <div class="row">
                              <div class="col-md-4">
-                                 <x-form labelname="Card Icon 1" name="card_icon_1">
+                                 <x-form labelname="Card Icon 1" name="card_icon_1" :danger=false>
                                     <input type="text" name="card_icon_1" class="form-control f-14" placeholder="Card Icon"/>
                                  </x-form>
-                                <x-form labelname="Card Title 1" name="card_title_1">
+                                <x-form labelname="Card Title 1" name="card_title_1" :danger=false>
                                     <input type="text" name="card_title_1" class="form-control f-14" placeholder="Card Title"/>
                                  </x-form>
-                                 <x-form labelname="Card Description" name="card_description_1">                         
+                                 <x-form labelname="Card Description" name="card_description_1" :danger=false>                         
                                     <textarea name="card_description_1" class="form-control f-14"></textarea>
                                  </x-form>
                              </div>
                              <div class="col-md-4">
-                              <x-form labelname="Card Icon 2" name="card_icon_2">
+                              <x-form labelname="Card Icon 2" name="card_icon_2" :danger=false>
                                  <input type="text" name="card_icon_2" class="form-control f-14" placeholder="Card Icon"/>
                               </x-form>
-                                <x-form labelname="Card Title 2" name="card_title_2">
+                                <x-form labelname="Card Title 2" name="card_title_2" :danger=false>
                                     <input type="text" name="card_title_2" class="form-control f-14" placeholder="Card Title"/>
                                  </x-form>
-                                 <x-form labelname="Card Description" name="card_description_2">                         
+                                 <x-form labelname="Card Description" name="card_description_2" :danger=false>                         
                                     <textarea name="card_description_2" class="form-control f-14"></textarea>
                                  </x-form>
                              </div>
                              <div class="col-md-4">
-                              <x-form labelname="Card Icon 3" name="card_icon_3">
+                              <x-form labelname="Card Icon 3" name="card_icon_3" :danger=false>
                                  <input type="text" name="card_icon_3" class="form-control f-14" placeholder="Card Icon"/>
                               </x-form>
-                                <x-form labelname="Card Title 3" name="card_title_3">
+                                <x-form labelname="Card Title 3" name="card_title_3" :danger=false>
                                     <input type="text" name="card_title_3" class="form-control f-14" placeholder="Card Title"/>
                                  </x-form>
-                                 <x-form labelname="Card Description" name="card_description_3">                         
+                                 <x-form labelname="Card Description" name="card_description_3" :danger=false>                         
                                     <textarea name="card_description_3" class="form-control f-14"></textarea>
                                  </x-form>
                              </div>
@@ -127,16 +121,16 @@
             <div class="card-body">             
                   <div class="row">
                       <div class="col-md-12"> 
-                        <x-form labelname="Page Banner Image" name="page_banner_image">
+                        <x-form labelname="Page Banner Image" name="page_banner_image" :danger=false>
                             <input accept="image/webp" type="file" class="form-control file" name="page_banner_image">
                          </x-form>                        
-                          <x-form labelname="Page Banner Title" name="page_banner_title">
+                          <x-form labelname="Page Banner Title" name="page_banner_title" :danger=false>
                              <input type="text" name="page_banner_title" class="form-control f-14" placeholder="Banner Title"/>
                           </x-form>
-                          <x-form labelname="Page Banner Sub Title" name="page_banner_subtitle">
+                          <x-form labelname="Page Banner Sub Title" name="page_banner_subtitle" :danger=false>
                             <input type="text" name="page_banner_subtitle" class="form-control f-14" placeholder="Banner Sub Title"/>
                          </x-form>
-                          <x-form labelname="Banner Description" name="page_banner_description">                         
+                          <x-form labelname="Banner Description" name="page_banner_description" :danger=false>                         
                              <textarea name="page_banner_description" class="form-control f-14"></textarea>
                           </x-form>
                       </div>                        
@@ -148,10 +142,10 @@
             <div class="card-body" id="divmain">             
                 <div class="row form-group mb-4 dynamic-group" data-index="1">
                       <div class="col-md-6"> 
-                        <x-form labelname="Sub Title" name="center_1_subtitle">
+                        <x-form labelname="Sub Title" name="center_1_subtitle" :danger=false>
                             <input type="text" name="center[1][subtitle]" class="form-control f-14" placeholder="Sub Title"/>
                          </x-form>                                           
-                          <x-form labelname="Title" name="center_1_title">
+                          <x-form labelname="Title" name="center_1_title" :danger=false>
                              <input type="text" name="center[1][title]" class="form-control f-14" placeholder="Title"/>
                           </x-form>                         
                           <x-form labelname="Description" name="center_1_description">                         
@@ -159,7 +153,7 @@
                           </x-form>
                       </div> 
                       <div class="col-md-6">
-                        <x-form labelname="Banner Image" name="center_1_banner_image">
+                        <x-form labelname="Banner Image" name="center_1_banner_image" :danger=false>
                             <input type="file" class="form-control file" name="center[1][banner_image]">
                          </x-form>   
                       </div>                     
@@ -172,10 +166,10 @@
             <div class="card-body">             
                 <div class="row form-group mb-4" id="faqgrp">
                     <div class="faq-dynamic-div pb-4" data-faqindex="1">
-                        <x-form labelname="Question" name="faq_1_q">
+                        <x-form labelname="Question" name="faq_1_q" :danger=false>
                             <input type="text" name="faq[1][q]" class="form-control f-14" placeholder="Question"/>
                          </x-form>  
-                         <x-form labelname="Answer" name="faq_1_ans">
+                         <x-form labelname="Answer" name="faq_1_ans" :danger=false>
                             <input type="text" name="faq[1][ans]" class="form-control f-14" placeholder="Answer"/>
                          </x-form> 
                     </div>                                         

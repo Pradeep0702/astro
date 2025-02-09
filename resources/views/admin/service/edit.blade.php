@@ -20,12 +20,7 @@
                              @endforeach
                             </select>
                           </x-form>                                          
-                      </div>    
-                      <div class="col-12">
-                        <x-form labelname="Menu icon" name="icon">
-                           <input value="{{$editdata->menu_icon}}" type="text" name="icon" class="form-control f-14" placeholder=""/>
-                        </x-form>
-                     </div>                    
+                      </div>           
                   </div>                       
             </div>
          </div>
