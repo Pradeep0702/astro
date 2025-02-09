@@ -1,4 +1,6 @@
 @props([
+    'labelname' => $labelname,
+    'name' => $name,
     'danger' => true
 ])
 <div class="mb-3">
