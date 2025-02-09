@@ -1,18 +1,23 @@
 <x-slayout 
-heading="{{$singlepageddata->hero_section['title']}}" 
-heading2="{{$singlepageddata->info_card_section['heading']}}" 
-hpara="{{$singlepageddata->hero_section['description']}}" 
-h2para=""
-ch1="{{$singlepageddata->info_card_section['card1']['title']}}" 
-ch2="{{$singlepageddata->info_card_section['card2']['title']}}"
-ch3="{{$singlepageddata->info_card_section['card3']['title']}}"
-cpara1="{{$singlepageddata->info_card_section['card1']['description']}}" 
-cpara2="{{$singlepageddata->info_card_section['card2']['description']}}" 
-cpara3="{{$singlepageddata->info_card_section['card3']['description']}}" 
-cardicon1="{{$singlepageddata->info_card_section['card1']['icon']}}"
-cardicon2="{{$singlepageddata->info_card_section['card2']['icon']}}"
-cardicon3="{{$singlepageddata->info_card_section['card3']['icon']}}"
+    heading="{{$singlepageddata->hero_section['title']}}" 
+    heading2="{{$singlepageddata->info_card_section['heading']}}" 
+    hpara="{{$singlepageddata->hero_section['description']}}" 
+    h2para=""
+    ch1="{{$singlepageddata->info_card_section['card1']['title']}}" 
+    ch2="{{$singlepageddata->info_card_section['card2']['title']}}"
+    ch3="{{$singlepageddata->info_card_section['card3']['title']}}"
+    cpara1="{{$singlepageddata->info_card_section['card1']['description']}}" 
+    cpara2="{{$singlepageddata->info_card_section['card2']['description']}}" 
+    cpara3="{{$singlepageddata->info_card_section['card3']['description']}}" 
+    cardicon1="{{$singlepageddata->info_card_section['card1']['icon']}}"
+    cardicon2="{{$singlepageddata->info_card_section['card2']['icon']}}"
+    cardicon3="{{$singlepageddata->info_card_section['card3']['icon']}}"
 >
+@section('title',$singlepageddata->meta_data['title'])
+@section('description',$singlepageddata->meta_data['des'])
+@section('keywords',$singlepageddata->meta_data['keywords'])
+
+<section class="search_section_top">
 <section id="service-inner-page-2nd" class="ptb">
          <div class="container-fluid res-container">
              <div class="row mx-md-5 mx-lg-5 g-4">
