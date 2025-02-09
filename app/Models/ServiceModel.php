@@ -3,7 +3,7 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\ServicecategoryModel;
+use App\Models\ServiceCategoryModel;
 
 class ServiceModel extends Model
 {
@@ -22,6 +22,6 @@ class ServiceModel extends Model
 
     
     public function categoryname(){
-        return $this->hasMany(ServicecategoryModel::class,'id','cat_id');
+        return $this->hasMany(ServiceCategoryModel::class,'id','cat_id');
     }
 }
