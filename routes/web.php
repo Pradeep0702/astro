@@ -27,7 +27,7 @@ Route::get('/work',[HomeController::class,'work'])->name('front.work');
 Route::get('/blog',[HomeController::class,'blog'])->name('front.blog');
 Route::get('/contact',[HomeController::class,'contact'])->name('front.contact');
 
-// Route::get('/web-development',[HomeController::class,'webdevelopment'])->name('front.webdevelopment');
+Route::get('/test/web-development',[HomeController::class,'webdevelopment'])->name('front.webdevelopment');
 // Route::get('/digital-marketing',[HomeController::class,'digitalmarketing'])->name('front.digitalmarketing');
 // Route::get('/social-media-marketing',[HomeController::class,'smm'])->name('front.smm');
 // Route::get('/app-development',[HomeController::class,'ad'])->name('front.ad');

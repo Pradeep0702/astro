@@ -40,6 +40,10 @@ class HomeController extends Controller
      public function getstarted(){
        return view('gs');
      }
+
+     public function webdevelopment(){
+      return view('web-development');
+     }
     
      //  Work 
      public function workurl($workurl){

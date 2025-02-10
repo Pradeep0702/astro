@@ -1,4 +1,8 @@
-<x-slayout heading="Web Development" heading2="The #1 Web Development Solution for Businesses" hpara="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio beatae, iure fuga deserunt, consequatur, dignissimos ipsam rerum saepe labore tenetur sequi ea porro aspernatur est praesentium veniam quod! Animi." ch1="Custom Design & UX" ch2="Scalability & Performance" ch3="SEO & Marketing Integration" cpara1="Unique designs that are easy to navigate and look great on any device." cpara2="Websites that grow with you, load quickly, and work smoothly." cpara3="Built for better search rankings and seamless marketing integration to boost your online presence."> 
+<x-slayout heading="Web Development" heading2="The #1 Web Development Solution for Businesses" hpara="Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio beatae, iure fuga deserunt, consequatur, dignissimos ipsam rerum saepe labore tenetur sequi ea porro aspernatur est praesentium veniam quod! Animi." ch1="Custom Design & UX" ch2="Scalability & Performance" ch3="SEO & Marketing Integration" cpara1="Unique designs that are easy to navigate and look great on any device." cpara2="Websites that grow with you, load quickly, and work smoothly." cpara3="Built for better search rankings and seamless marketing integration to boost your online presence."
+cardicon1="1"
+cardicon2="1"
+cardicon3="1"
+> 
    <section id="service-inner-page-2nd" class="ptb">
         <div class="container-fluid res-container">
             <div class="row mx-md-5 mx-lg-5 g-4">
