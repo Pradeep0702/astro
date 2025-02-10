@@ -213,7 +213,13 @@
 
                             $(`#${key}`).html(value); 
                         });
-                     }                
+                     }  
+                     if(res.code == 500){                    
+                              Toast.fire({
+                              icon: "error",
+                              title: `${res.message} ${res.error}`
+                         });
+                     }              
                      $('#submitbtn').html('Submit <i class="fas fa-long-arrow-alt-right"></i>');
                      $('#submitbtn').attr('disabled',false)     
                 }
@@ -225,10 +231,10 @@
  function faqdiv(faqindex){
   
     const faqdiv = `<div class="faq-dynamic-div border-top border-primary pt-4 pb-4" data-faqindex="${faqindex}">
-                        <x-form labelname="Question" name="faq_${faqindex}_q">
+                        <x-form labelname="Question" name="faq_${faqindex}_q" :danger=false>
                             <input type="text" name="faq[${faqindex}][q]" class="form-control f-14" placeholder="Question"/>
                          </x-form>  
-                         <x-form labelname="Answer" name="faq_${faqindex}_ans">
+                         <x-form labelname="Answer" name="faq_${faqindex}_ans" :danger=false>
                             <input type="text" name="faq[${faqindex}][ans]" class="form-control f-14" placeholder="Answer"/>
                          </x-form> 
                     <button type="button" class="w-25 btn btn-danger remove-btn-faq" data-faqindex="${faqindex}"><i class="fas fa-trash-alt"></i></button>
@@ -253,18 +259,18 @@
  function dynamicmaindiv(index){
     const dynamicdiv = ` <div class="row form-group mb-4 pt-4 dynamic-group border-top border-primary pt-4 pb-4" data-index="${index}">
                       <div class="col-md-6"> 
-                        <x-form labelname="Sub Title" name="center_${index}_subtitle">
+                        <x-form labelname="Sub Title" name="center_${index}_subtitle" :danger=false>
                             <input type="text" name="center[${index}][subtitle]" class="form-control f-14" placeholder="Sub Title"/>
                          </x-form>                                           
-                          <x-form labelname="Title" name="center_${index}_title">
+                          <x-form labelname="Title" name="center_${index}_title" :danger=false>
                              <input type="text" name="center[${index}][title]" class="form-control f-14" placeholder="Title"/>
                           </x-form>                         
-                          <x-form labelname="Description" name="center_${index}_description">                         
+                          <x-form labelname="Description" name="center_${index}_description" :danger=false>                         
                              <textarea name="center[${index}][description]" class="form-control f-14"></textarea>
                           </x-form>
                       </div> 
                       <div class="col-md-6">
-                        <x-form labelname="Banner Image" name="banner_image_${index}">
+                        <x-form labelname="Banner Image" name="banner_image_${index}" :danger=false>
                             <input accept="image/webp" type="file" class="form-control file" name="center[${index}][banner_image]">
                          </x-form>   
                       </div> 

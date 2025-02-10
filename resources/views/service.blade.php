@@ -21,7 +21,7 @@
 <section id="service-inner-page-2nd" class="ptb">
          <div class="container-fluid res-container">
              <div class="row mx-md-5 mx-lg-5 g-4">
-                     <div class="col-md-12"><img src="{{asset('upload/'.$singlepageddata->page_banner_section['image'])}}" class="img-fluid" alt=""/></div>  
+                     <div class="col-md-12"><img src="{{asset('upload/'.$singlepageddata->page_banner_section['image'])}}" class="img-fluid w-100" alt=""/></div>  
                      <div class="col-md-5">
                          <div class="card-header mb-3">{{$singlepageddata->page_banner_section['subtitle']}}</div>
                          <div class="card-body">

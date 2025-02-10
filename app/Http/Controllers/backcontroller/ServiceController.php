@@ -7,6 +7,7 @@ use App\Models\ServiceCategoryModel;
 use App\Models\ServiceModel;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use Mockery\Expectation;
 use Yajra\DataTables\Facades\DataTables;
 
 class ServiceController extends Controller
@@ -74,6 +75,8 @@ class ServiceController extends Controller
                return response()->json(['code' => '400', 'message' => $validation->errors(), ]);
            } else {
 
+            try{
+                
             $main_section=[];
             $faq_section=[];
          
@@ -143,6 +146,10 @@ class ServiceController extends Controller
             }else{
                 return response()->json(['code' => '400','Something Went Wrong']); 
             }
+
+            } catch (\Exception $e) {
+               return response()->json(['code' => '500', 'message' => 'Something Went Wrong', 'error' => $e->getMessage()]);
+            }
             
            }
        }    
@@ -161,6 +168,7 @@ class ServiceController extends Controller
     
     public function update(Request $request, string $id){
 
+        try{            
         $main_section = [];
         $faq_section = [];
         
@@ -175,11 +183,16 @@ class ServiceController extends Controller
         foreach($request->center as $index => $data){ 
             $filename = null;
             $dataIndex = $index - 1;
-            if(!empty($data['banner_image'])){                
-                $filename = fileupload('service', $data['banner_image']);
-                removeimage($service->main_section[$dataIndex]['image']);
+            if(!empty($data['banner_image'])){  
+                if(isset($data['banner_image'])){
+                     $filename = fileupload('service', $data['banner_image']);
+                     removeimage($service->main_section[$dataIndex]['image']);
+                }else{
+                     $filename="";
+                }              
+           
             }else{          
-                $filename = $service->main_section[$dataIndex]['image'];                
+                $filename = isset( $service->main_section[$dataIndex]['image']) ?  $service->main_section[$dataIndex]['image'] : '';                
             }     
 
             $main_section[] = [
@@ -195,13 +208,17 @@ class ServiceController extends Controller
         if (!empty($request->page_banner_image)) {
             $uploadedImage = fileupload('service', $request->page_banner_image);
             if ($uploadedImage) {
-                removeimage($service->page_banner_section['image']);
-                $imagePath = $uploadedImage;
+                if(isset($service->page_banner_section['image'])){
+                    removeimage($service->page_banner_section['image']);
+                    $imagePath = $uploadedImage;
+                }else{
+                    $imagePath ="";
+                }
             } else {
                 $imagePath = $service->page_banner_section['image'];
             }
         } else {
-            $imagePath = $service->page_banner_section['image'];
+            $imagePath = isset($service->page_banner_section['image']) ? $service->page_banner_section['image'] : '' ;
         }
 
 
@@ -252,7 +269,12 @@ class ServiceController extends Controller
             return response()->json(['code' => '200']);
         }else{
             return response()->json(['code' => '400','Something Went Wrong']); 
-        }      
+        } 
+
+        } catch (\Exception $e) {
+            return response()->json(['code' => '500', 'message' => 'Something Went Wrong', 'error' => $e->getMessage()]);
+        }
+     
         
     }
 
