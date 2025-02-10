@@ -1,7 +1,7 @@
 @php
-    $defaultTitle= 'Online Cab Booking and Taxi Service | Affordable  - MyTripBazar';
-    $defaultDescription = 'Taxi service booking near me | Taxi hire | Outstation taxi booking | City taxi service |  Round Trip | Airport Taxi | Hassle-free taxi rides | Taxi with affordable fare';
-    $defaultKeywords = 'Online taxi booking, cab services, affordable cab, book a cab, city rides, one way trip booking taxi, round trip booking taxi, local booking taxi, airport transfer taxi';
+    $defaultTitle= 'web development company in kota - rajasathan';
+    $defaultDescription = 'web development company in kota - rajasathan';
+    $defaultKeywords = 'web development company in kota - rajasathan';
 @endphp
 <!DOCTYPE html>
 <html lang="en">
