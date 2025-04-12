@@ -1257,6 +1257,10 @@
 	 background: transparent;
 	 font-size: 13px !important;
 }
+
+.megamenu .list-group-item:hover span{
+	color:rgba(254, 88, 122, 0.8);
+}
  .megamenu .list-group i {
 	 background: transparent !important;
 	 padding: 0px 10px 0px 0px;
