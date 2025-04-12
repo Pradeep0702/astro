@@ -1205,8 +1205,8 @@
 }
  .navbar .megamenu a {
 	 color: var(--borderColor);
-	 font-size: 16px !important;
-	 line-height: 40px !important;
+	 font-size:13px !important;
+	 line-height:28px !important;
 	 text-transform: capitalize;
 	 text-decoration: none !important;
 	 font-weight: 500;
@@ -1277,12 +1277,12 @@
 }
 
 .category-box {
-	padding: 13px 10px;
+	padding:5px 10px;
 	border-radius: 15px;
 	text-transform: capitalize;
 	display: flex;
 	align-items: center;
-	font-size: 18px;
+	font-size:15px;
 	font-weight: 500;
 }
 

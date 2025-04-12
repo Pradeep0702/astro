@@ -19,7 +19,7 @@
                           <div class="container-fluid">
                                    <div class="row mx-md-5 mx-lg-5">
                                   @foreach (Helpers::categories() as $categorie)
-                                    <div class="col-md-4 col-lg-4 col-12">                                        
+                                    <div class="col-md-3 col-lg-3 col-12">                                        
                                         <div class="{{\Str::slug($categorie->category_name)}} category-box">{!!$categorie->category_icon !!} <div class="ms-2">{{$categorie->category_name}}</div></div>
                                         <ul class="list-group border-0">
                                             @foreach ($categorie->menu as $menu)
