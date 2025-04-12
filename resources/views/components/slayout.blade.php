@@ -1,8 +1,8 @@
 @extends('frontlayout.mainlayout')
 @section('section')
 <section id="hero-banner">    
-    <h1>{{$heading}}</h1>
-    <p class="para-font-hero">{{$hpara}}</p>
+    <h1>{!! $heading !!}</h1>
+    <p class="para-font-hero">{!! $hpara !!}</p>
     <div class="gap-md-3 gap-3 d-flex">
           <a href="{{ route('front.work') }}" class="btn btn-outline-primary w-100">Case Study</a>
         <a href="{{route('front.getstarted')}}" class="btn btn-primary w-100">Schedule a Meeting</a>      
@@ -16,8 +16,8 @@
                 <div class="card h-100">
                     <div class="card-header">{!! html_entity_decode($cardicon1) !!}</div>                    
                     <div class="card-body">
-                      <div class="card-title">{{$ch1}}</div>
-                       <p>{{$cpara1}}</p>
+                      <div class="card-title">{!! $ch1 !!}</div>
+                       <p>{!! $cpara1 !!}</p>
                     </div>
                 </div>
              </div> 
@@ -25,8 +25,8 @@
                 <div class="card h-100">
                     <div class="card-header">{!! html_entity_decode($cardicon2) !!}</div>
                     <div class="card-body">
-                        <div class="card-title">{{$ch2}}</div>
-                         <p>{{$cpara2}}</p>
+                        <div class="card-title">{!! $ch2 !!}</div>
+                         <p>{!! $cpara2 !!}</p>
                       </div>
                 </div>
              </div>
@@ -34,8 +34,8 @@
                 <div class="card h-100">
                     <div class="card-header">{!! html_entity_decode($cardicon3) !!}</div>
                     <div class="card-body">
-                        <div class="card-title">{{$ch3}}</div>
-                         <p>{{$cpara3}}</p>
+                        <div class="card-title">{!! $ch3 !!}</div>
+                         <p>{!! $cpara3 !!}</p>
                       </div>
                 </div>
              </div> 
