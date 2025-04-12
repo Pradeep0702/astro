@@ -1255,7 +1255,7 @@
 }
  .megamenu .list-group-item {
 	 background: transparent;
-	 font-size: 15px !important;
+	 font-size: 13px !important;
 }
  .megamenu .list-group i {
 	 background: transparent !important;
@@ -1282,7 +1282,7 @@
 	text-transform: capitalize;
 	display: flex;
 	align-items: center;
-	font-size:15px;
+	font-size:13px;
 	font-weight: 500;
 }
 
