@@ -2,7 +2,7 @@
 @section('section')
 <section id="hero-banner">
     <div class="container">
-    <h1>Turning Ideas Into Popular Brands rr</h1>
+    <h1>Turning Ideas Into Popular Brands rrd</h1>
     <p class="mw-100 para-font-hero">From concept to creation, we transform your unique ideas into recognizable and beloved brands. Through strategic design, targeted marketing, and consistent branding efforts, we ensure your business stands out in the competitive market, resonating with your audience and driving sustained growth.</p>
     </div>
     <div class="gap-3 d-flex align-items-center">
