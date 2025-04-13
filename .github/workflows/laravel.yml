@@ -15,8 +15,8 @@ jobs:
        - name: Sync files
          uses: SamKirkland/FTP-Deploy-Action@v4.3.5
          with:
-           server: ftp.socialastro.com
-           username: astro@socialastro.com
-           password: ag$Mz^@A{Kx{
+           server: ftp.socialit.us
+           username: pradeep@socialit.us
+           password: B1F3SUGOV]Z0
            script: "./.scripts/deploy.sh" 
                  
