@@ -6,7 +6,7 @@
                      <div class="col-md-5">
                          <div class="card-header mb-3">Conversions</div>
                          <div class="card-body">
-                             <h3>Strategic Ad Campaigns</h3>
+                             <h3>Strategic Ad Campaigns </h3>
                          </div>
                      </div>
                      <div class="col-md-7">
