@@ -89,7 +89,7 @@ class AdminuserController extends Controller
                     'role'=>$request->role_type
                 ]);
                 session()->flash('type', 'success');
-                session()->flash('message', 'Successfully Updated');
+                session()->flash('message', 'Successfully Updated ');
                 return response()->json(['code' => '200']);
             }
         }
