@@ -18,4 +18,4 @@ jobs:
            server: ftp.socialit.us
            username: pradeep@socialit.us
            password: B1F3SUGOV]Z0
-           server-dir: /home/socialitusa/public_html/
+           server-dir: public_html/
