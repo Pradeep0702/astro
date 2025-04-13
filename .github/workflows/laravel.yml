@@ -18,5 +18,4 @@ jobs:
            server: ftp.socialit.us
            username: pradeep@socialit.us
            password: B1F3SUGOV]Z0
-           local-dir: /socialastrolaravel_git/
-           server-dir: /            
+           script: "./.scripts/deploy.sh"
