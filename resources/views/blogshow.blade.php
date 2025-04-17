@@ -7,7 +7,7 @@
             <article class="custom-shadow p-4 mb-4 bg-white rounded">
                 <h1 class="blog-title mb-3">{{$data->title}}</h1>
                 <p class="text-muted">{{date('d M Y',strtotime($data->created_at))}}</p>
-                <img src="{{asset('upload/'.$data->thumbnail_image)}}" class="img-fluid post-img mb-4" alt="Blog Post Image">
+                <img src="{{public_path('upload/'.$data->thumbnail_image)}}" class="img-fluid post-img mb-4" alt="Blog Post Image">
                 <p>{!! htmlspecialchars_decode($data->content) !!}</p>
                 </article>
         </div>
