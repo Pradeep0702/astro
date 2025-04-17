@@ -29,7 +29,7 @@
                          </div>
                      </div>
                      <div class="col-md-7">
-                        <p>{{$singlepageddata->page_banner_section['description']}}</p>
+                        <p>{!! nl2br($singlepageddata->page_banner_section['description']) !!}</p>
                      </div>
                 </div>
            </div>

@@ -85,7 +85,7 @@ class ServiceController extends Controller
                 $main_section[] = [
                     'title'=>$data['title']  ?? "",
                     'subtitle'=>$data['subtitle']  ?? "",
-                    'description'=>$data['description']  ?? "",
+                    'description' => isset($data['description']) ? nl2br($data['description']) : "",
                     'image'=>$filename
                 ]; 
             }
@@ -198,7 +198,7 @@ class ServiceController extends Controller
             $main_section[] = [
                 'title'=>$data['title'],
                 'subtitle'=>$data['subtitle'],
-                'description'=>$data['description'],
+                'description' => isset($data['description']) ? nl2br($data['description']) : "",
                 'image'=>$filename
             ]; 
         }             
