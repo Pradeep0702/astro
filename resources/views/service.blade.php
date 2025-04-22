@@ -29,7 +29,10 @@
                          </div>
                      </div>
                      <div class="col-md-7">
-                        <p>{!! nl2br($singlepageddata->page_banner_section['description']) !!}</p>
+                        <p style="white-space: normal;">    {!! html_entity_decode(strip_tags(html_entity_decode($singlepageddata->page_banner_section['description']))) !!}
+
+
+                        </p>
                      </div>
                 </div>
            </div>
@@ -39,7 +42,7 @@
         $orderClass1 = $loop->iteration % 2 == 0 ? 'order-1 order-md-2' : 'order-2 order-md-1';
         $orderClass2 = $loop->iteration % 2 == 0 ? 'order-2 order-md-1' : 'order-1 order-md-2';
        @endphp
-       <x-servicesection order="{{$orderClass1}}" order2="{{$orderClass2}}" imgsection="{{asset('upload/'.$section['image'])}}" headertitle="{{$section['subtitle']}}" title="{{$section['title']}}" p="{{$section['description']}}"/>
+       <x-servicesection order="{{$orderClass1}}" order2="{{$orderClass2}}" imgsection="{{asset('upload/'.$section['image'])}}" headertitle="{{$section['subtitle']}}" title="{{$section['title']}}" p="{!! nl2br($section['description']) !!}"/>
      @endforeach
      <section id="faq" class="ptb">
         <div class="container-fluid res-container">

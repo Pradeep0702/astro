@@ -10,14 +10,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
        - name: Get latest code
-         uses: actions/checkout@v4
-       
-       - name: Sync files
-         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-         with:   
-           server: ftp.socialastro.com
-           username: astro@socialastro.com
-           password: ag$Mz^@A{Kx{
+         uses: actions/checkout@v4  
 
        - name: Sync files to ftp.socialastro.com
          uses: SamKirkland/FTP-Deploy-Action@v4.3.5
