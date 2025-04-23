@@ -50,7 +50,7 @@
             <div class="row mx-md-3 mx-lg-3 mt-3">
                 <div class="accordion accordion-flush" id="faq"> 
                     @foreach ($singlepageddata->faq_section as $index => $faqsection)
-                     <x-accodian q="{{$faqsection['q']}}" ans="{{$faqsection['ans']}}" id="{{$index}}"/>
+                     <x-accodian q="{!! $faqsection['q'] !!}" ans="{!! $faqsection['ans'] !!}" id="{{$index}}"/>
                      @endforeach
                 </div>
              </div> 
