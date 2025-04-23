@@ -15,6 +15,7 @@
                  <tr>
                      <th>Sr No</th>
                      <th>Category Name</th> 
+                     <th>Title</th> 
                      <th>Slug</th>  
                      <th>Created_at/Updated_at</th>          
                      <th>Action</th>
@@ -34,6 +35,7 @@
      columns: [ 
             { data:'DT_RowIndex'},
             { data:'category_name'},   
+            { data:'title'},
             { data:'slug'}, 
             { data:'cu'},
             { data:'action',"orderable":false},
