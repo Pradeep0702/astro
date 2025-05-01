@@ -1,4 +1,7 @@
 @extends('frontlayout.mainlayout')
+@section('title',$data->title)
+@section('description',$data->meta_d)
+@section('keywords',$data->meta_key)
 @section('section')
  <section id="blog-content" class="ptb">
  <div class="container-fluid mt-5">
