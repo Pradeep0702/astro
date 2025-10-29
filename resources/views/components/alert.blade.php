@@ -1,6 +1,6 @@
 @if(session()->has('type') && session()->has('message'))
 <script>
-const Toast = Swal.mixin({
+let ToastFire = Swal.mixin({
   toast: true,
   position: "top-end",
   showConfirmButton: false,
@@ -11,7 +11,7 @@ const Toast = Swal.mixin({
     toast.onmouseleave = Swal.resumeTimer;
   }
 });
-Toast.fire({
+ToastFire.fire({
   icon: "{{session('type')}}",
   title: "{{session('message')}}"
 });
