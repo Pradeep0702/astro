@@ -149,7 +149,7 @@
                              <input type="text" name="center[1][title]" class="form-control f-14" placeholder="Title"/>
                           </x-form>                         
                           <x-form labelname="Description" name="center_1_description">                         
-                             <textarea name="center[1][description]" class="form-control f-14"></textarea>
+                             <textarea name="center[1][description]" class="form-control f-14 summernoteService"></textarea>
                           </x-form>
                       </div> 
                       <div class="col-md-6">
@@ -266,7 +266,7 @@
                              <input type="text" name="center[${index}][title]" class="form-control f-14" placeholder="Title"/>
                           </x-form>                         
                           <x-form labelname="Description" name="center_${index}_description" :danger=false>                         
-                             <textarea name="center[${index}][description]" class="form-control f-14"></textarea>
+                             <textarea  name="center[${index}][description]" class="form-control f-14 summernoteService"></textarea>
                           </x-form>
                       </div> 
                       <div class="col-md-6">
@@ -286,6 +286,7 @@
 
                 $('#divmain').append(dynamicmaindiv(index));
                 $('.file').not('.dropify-initialized').dropify();
+                textEditore();
                 index++;             
     });
 
@@ -293,6 +294,8 @@
         const index = $(this).data('index');    
         $(`.dynamic-group[data-index="${index}"]`).remove();
     }) 
+
+
 </script>        
 @endpush
 </x-adminlayout>

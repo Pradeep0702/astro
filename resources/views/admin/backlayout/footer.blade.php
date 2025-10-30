@@ -7,6 +7,7 @@
 <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 <script src="{{asset('backhand/js/script.js')}}"></script>  
 @endif
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     const Toast = Swal.mixin({
@@ -20,6 +21,23 @@
                 toast.onmouseleave = Swal.resumeTimer;
             }
      });
+
+
+    function textEditore() {
+    $('.summernoteService').summernote({
+        placeholder: 'Write Here',
+        tabsize: 2,
+        height: 120,
+        toolbar: [
+        ['style', ['bold', 'italic', 'underline', 'clear']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['insert', ['link']],
+        ['view', ['undo', 'redo', 'codeview']]
+        ],
+    });
+    }
+    textEditore()
 </script>
 @stack('js')
 <x-alert/>

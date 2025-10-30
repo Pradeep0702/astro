@@ -152,7 +152,7 @@
                              <input value="{{$section['title']}}" type="text" name="center[{{$index+1}}][title]" class="form-control f-14" placeholder="Title"/>
                           </x-form>                         
                           <x-form labelname="Description" name="center_1_description" :danger=false>                         
-                             <textarea name="center[{{$index+1}}][description]" class="form-control f-14">{{$section['description']}}</textarea>
+                             <textarea name="center[{{$index+1}}][description]" class="summernoteService form-control f-14">{{$section['description']}}</textarea>
                           </x-form>
                       </div> 
                       <div class="col-md-6">
@@ -181,7 +181,7 @@
                             <input value="{{$faqsection['q']}}" type="text" name="faq[{{$index+1}}][q]" class="form-control f-14" placeholder="Question"/>
                          </x-form>  
                          <x-form labelname="Answer" name="faq_1_ans" :danger=false>
-                            <input value="{{$faqsection['ans']}}" type="text" name="faq[{{$index+1}}][ans]" class="form-control f-14" placeholder="Answer"/>
+                            <input value="{{$faqsection['ans']}}" type="text" name="faq[{{$index+1}}][ans]" class=" form-control f-14" placeholder="Answer"/>
                          </x-form> 
                          @if($faqindex > 1)
                          <button type="button" class="w-25 btn btn-danger remove-btn-faq" data-faqindex="{{$index+1}}"><i class="fas fa-trash-alt"></i></button>
@@ -280,7 +280,7 @@
                              <input type="text" name="center[${index}][title]" class="form-control f-14" placeholder="Title"/>
                           </x-form>                         
                           <x-form labelname="Description" name="center_${index}_description" :danger=false>                         
-                             <textarea name="center[${index}][description]" class="form-control f-14"></textarea>
+                             <textarea name="center[${index}][description]" class="form-control f-14 summernoteService"></textarea>
                           </x-form>
                       </div> 
                       <div class="col-md-6">
