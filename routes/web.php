@@ -18,6 +18,7 @@ use App\Http\Controllers\backcontroller\BussinesscontactController;
 use App\Http\Controllers\backcontroller\ServiceCategoryController;
 use App\Http\Controllers\backcontroller\ServiceController;
 use App\Http\Controllers\backController\CitypageController;
+use App\Http\Controllers\frontController\SiteMapController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -26,24 +27,6 @@ Route::get('/career',[HomeController::class,'career'])->name('front.career');
 Route::get('/work',[HomeController::class,'work'])->name('front.work');
 Route::get('/blog',[HomeController::class,'blog'])->name('front.blog');
 Route::get('/contact',[HomeController::class,'contact'])->name('front.contact');
-
-Route::get('/test/web-development',[HomeController::class,'webdevelopment'])->name('front.webdevelopment');
-// Route::get('/digital-marketing',[HomeController::class,'digitalmarketing'])->name('front.digitalmarketing');
-// Route::get('/social-media-marketing',[HomeController::class,'smm'])->name('front.smm');
-// Route::get('/app-development',[HomeController::class,'ad'])->name('front.ad');
-// Route::get('/ui-ux-design',[HomeController::class,'uiux'])->name('front.uiux');
-// Route::get('/graphic-design',[HomeController::class,'gd'])->name('front.gd');
-// Route::get('/search-engine-optimization',[HomeController::class,'seo'])->name('front.seo');
-// Route::get('/search-engine-marketing',[HomeController::class,'sem'])->name('front.sem');
-// Route::get('/branding-packaging',[HomeController::class,'ba'])->name('front.ba');
-// Route::get('/google-my-bussiness',[HomeController::class,'gmb'])->name('front.gmb');
-// Route::get('/advertisement',[HomeController::class,'a'])->name('front.a');
-// Route::get('/e-commerce-development',[HomeController::class,'ecd'])->name('front.ecd');
-// Route::get('/logo-design',[HomeController::class,'l'])->name('front.l');
-// Route::get('/print-media',[HomeController::class,'pm'])->name('front.pm');
-// Route::get('/digital-banners',[HomeController::class,'db'])->name('front.db');
-// Route::get('/motion-graphics',[HomeController::class,'mg'])->name('front.mg');
-
 Route::get('/services',[HomeController::class,'services'])->name('front.services');
 Route::get('/get-started',[HomeController::class,'getstarted'])->name('front.getstarted');
 Route::post('/get-started/store',[BussinesscontactController::class,'store'])->name('front.getstarted.store');
@@ -55,6 +38,9 @@ Route::get('/work/{workurl:slug}',[HomeController::class,'workurl'])->name('fron
 Route::get('/blog/loadmore',[BlogController::class,'blogshow'])->name('front.blogshow');
 Route::get('/blog',[HomeController::class,'blog'])->name('front.blog');
 Route::get('/blog/{blogurl:slug}',[HomeController::class,'blogurl'])->name('front.blogurl');
+Route::get('/sitemap.xml',[SiteMapController::class,'index'])->name('front.sitemap.index');
+Route::get('/service/sitemap_index.xml',[SiteMapController::class,'serviceSitemap'])->name('front.sitemap.serviceSitemap');
+Route::get('/blog-sitemp/sitemap_index.xml',[SiteMapController::class,'blogsitemap'])->name('front.sitemap.blogsitemap');
 
 
 // ===============================================================
