@@ -8,15 +8,15 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::table('service_page', function (Blueprint $table) {
-            $table->dropColumn('menu_icon');
+        Schema::table('service_page', function (Blueprint $table) {            
+            $table->string('menu_icon', 255)->nullable();
         });
     }
 
     public function down(): void
     {
         Schema::table('service_page', function (Blueprint $table) {
-            $table->string('menu_icon', 255)->nullable();
+            $table->dropColumn('menu_icon');
         });
     }
 };
