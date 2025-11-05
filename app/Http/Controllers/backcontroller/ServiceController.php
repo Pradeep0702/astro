@@ -97,6 +97,8 @@ class ServiceController extends Controller
                 ]; 
             }
 
+ 
+
             $create = ServiceModel::create([
                 'cat_id'=>$request->cat_id,
                 'menu_name'=>$request->menu_name,
@@ -221,11 +223,18 @@ class ServiceController extends Controller
             $imagePath = isset($service->page_banner_section['image']) ? $service->page_banner_section['image'] : '' ;
         }
 
+        if ($request->main_category_page == 'yes') {
+                ServiceModel::where('cat_id', $request->cat_id)->update(['main_category_page' => '0']);
+                $mainCategoryValue = '1';
+        } else {
+                $mainCategoryValue = '0';
+        }
 
         $update = $service->update([
             'cat_id' => $request->cat_id,
             'menu_name' => $request->menu_name,
             'menu_slug' => str::slug($request->menu_name),
+            'main_category_page'=> $mainCategoryValue,
             'meta_data' => [
                 'title' => $request->meta_title,
                 'keywords' => $request->meta_keywords,

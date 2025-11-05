@@ -19,11 +19,14 @@
                           <div class="container-fluid">
                                    <div class="row mx-md-5 mx-lg-5">
                                   @foreach (Helpers::categories() as $categorie)
+                                  @php $mainMenu = $categorie->menu->firstWhere('main_category_page', 1); @endphp
                                     <div class="col-md-3 col-lg-3 col-12">                                        
-                                        <div class="{{\Str::slug($categorie->category_name)}} category-box">{!!$categorie->category_icon !!} <div class="ms-2">{{$categorie->category_name}}</div></div>
+                                        <a href="{{ $mainMenu ? route('front.serviceurl', $mainMenu->menu_slug) : 'javascript:void(0)' }}"><div class="{{\Str::slug($categorie->category_name)}} category-box">{!!$categorie->category_icon !!} <div class="ms-2">{{$categorie->category_name}}</div></div></a>
                                         <ul class="list-group border-0">
                                             @foreach ($categorie->menu as $menu)
-                                               <a  href="{{route('front.serviceurl',$menu->menu_slug)}}"><li class="list-group-item border-0 px-0 py-0"><i class="bi bi-chevron-right"></i> <span>{{$menu->menu_name}}</span></li></a>
+                                                @if ($menu->main_category_page == 0)
+                                                    <a  href="{{route('front.serviceurl',$menu->menu_slug)}}"><li class="list-group-item border-0 px-0 py-0"><i class="bi bi-chevron-right"></i> <span>{{$menu->menu_name}}</span></li></a>
+                                                @endif 
                                             @endforeach
                                         </ul>
                                     </div>

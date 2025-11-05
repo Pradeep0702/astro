@@ -4,7 +4,7 @@
     'danger' => true
 ])
 <div class="mb-3">
-    <label class="form-label">{{$labelname}} 
+    @if(!empty($labelname))<label class="form-label">{{$labelname}}@endif
       @if($danger)
       <span class='text-danger'>*</span>
       @endif

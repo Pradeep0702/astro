@@ -23,6 +23,20 @@
                       </div>           
                   </div>                       
             </div>
+            <div class="card-header py-3 border-top"><h5>Do you want to make it the main category page?</h5></div>
+            <div class="card-body">             
+                  <div class="row">
+                      <div class="col-md-12">                    
+                          <x-form labelname="" name="main_category_page" :danger=false>
+                            <select id="main_category_select" name="main_category_page" class="form-control text-capitalize">
+                             <option value="">Choose Option</option>   
+                                 <option class="text-capitalize" value="yes">Yes</option>
+                                 <option class="text-capitalize" value="no">No</option>
+                            </select>
+                          </x-form>                                          
+                      </div>           
+                  </div>                       
+            </div>
          </div>
          <div class="card mt-3">
             <div class="card-header py-3"><h5>Menu Show Category Name</h5></div>
@@ -306,7 +320,35 @@
     $('body').on('click', '.remove-btn', function () {
         const index = $(this).data('index');    
         $(`.dynamic-group[data-index="${index}"]`).remove();
-    }) 
+    })
+
+      let previousValue = "";
+
+      const select = document.getElementById('main_category_select');
+
+      select.addEventListener('click', function () {
+         previousValue = this.value;
+      });
+
+      select.addEventListener('change', function (e) {
+         const newValue = this.value;
+
+         Swal.fire({
+            title: 'Do you want to make it the main category page?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+         }).then((result) => {
+            if (!result.isConfirmed) {
+                  this.value = previousValue;
+            } else {
+                  previousValue = newValue;
+                  console.log('Confirmed ->', previousValue, newValue);
+            }
+         });
+      });
+
 </script>        
 @endpush
 </x-adminlayout>

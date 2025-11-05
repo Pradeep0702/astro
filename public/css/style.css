@@ -1290,6 +1290,10 @@
 	font-weight: 500;
 }
 
+.category-box:hover{
+	text-decoration: underline;
+}
+
 
 
 /*======================Hero Banner Css=========================*/
