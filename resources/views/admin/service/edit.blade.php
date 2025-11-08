@@ -30,8 +30,8 @@
                           <x-form labelname="" name="main_category_page" :danger=false>
                             <select id="main_category_select" name="main_category_page" class="form-control text-capitalize">
                              <option value="">Choose Option</option>   
-                                 <option class="text-capitalize" value="yes">Yes</option>
-                                 <option class="text-capitalize" value="no">No</option>
+                                 <option {{$editdata->main_category_page == 1 ? 'selected' : ''}} class="text-capitalize" value="yes">Yes</option>
+                                 <option {{$editdata->main_category_page == 0 ? 'selected' : ''}} class="text-capitalize" value="no">No</option>
                             </select>
                           </x-form>                                          
                       </div>           
