@@ -44,6 +44,25 @@
        @endphp
        <x-servicesection order="{{$orderClass1}}" order2="{{$orderClass2}}" imgsection="{{asset('upload/'.$section['image'])}}" headertitle="{{$section['subtitle']}}" title="{{$section['title']}}" p="{!! nl2br($section['description']) !!}"/>
      @endforeach
+     <section id="customer-review" class="ptb">
+        <div class="container-fluid res-container">
+        <h5 class="font-size-heading">See What Our Clients Have To Say About Us</h5>
+        <p class="para-font">Read how our clients describe their journey with us and our impact on their success.</p>
+            <div class="row mx-md-5 mx-lg-5 g-4 review-card-group"> 
+                <div class="col-md-12">
+                    <div class="reviews">
+                        @foreach($testimonials as $testimonial)
+                        <x-reviewcard image="{{$testimonial->image}}" para="{{$testimonial->review}}" name="{{$testimonial->name}}" company="{{$testimonial->desgination}}"/>   
+                        @endforeach                        
+                    </div>
+                    <div class="reviews-btn-slide">
+                        <button class="reviews-prev"><i class="bi bi-arrow-left"></i></button>
+                        <button class="reviews-next"><i class="bi bi-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
      <section id="faq" class="ptb">
         <div class="container-fluid res-container">
             <h6 class="font-size-heading mb-5">Frequently Asked Questions</h6>        

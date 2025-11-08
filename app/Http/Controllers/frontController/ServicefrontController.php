@@ -8,9 +8,11 @@ use App\Models\ServiceModel;
 class ServicefrontController extends Controller
 {
     public function index($serviceurl){
+        $testimonials = TestimonialModel::where('status','active')
+        ->limit(10)->latest('created_at')->get();
         $singlepageddata = ServiceModel::where('menu_slug',$serviceurl)->first();
         if($singlepageddata){
-            return view('service',compact('singlepageddata'));  
+            return view('service',compact('singlepageddata','testimonials'));  
         }else{
             abort('404');
         }              
