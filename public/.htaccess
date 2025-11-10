@@ -72,8 +72,11 @@ RewriteEngine On
 # -------------------------------
 # Redirect /public to main domain
 # -------------------------------
-RewriteCond %{REQUEST_URI} ^/public [NC]
-RewriteRule ^public/?(.*)$ https://socialit.us/ [R=301,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
 
 # -------------------------------
 # Remove index.php from URL
