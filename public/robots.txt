@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /index.php
+Disallow: /public
+Sitemap: https://socialit.us/sitemap.xml
