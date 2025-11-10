@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>   
+    <link rel="canonical" href="@yield('url',url()->full())" />
     {!!'<style>'!!}
         @foreach (Helpers::categories() as $category)
             .{{\Str::slug($category->category_name)}} {background-color: {{ $category->category_design['bg'] }};color: {{ $category->category_design['text_color'] }}; }
