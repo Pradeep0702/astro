@@ -67,34 +67,19 @@
     ExpiresByType text/css "access plus 0 seconds"
 </IfModule>
 
+
 RewriteEngine On
 
-# -------------------------------
-# Redirect /public to main domain
-# -------------------------------
-<IfModule mod_rewrite.c>
-    RewriteEngine On
+# Redirect "public" folder access to main URL
+RewriteCond %{REQUEST_URI} ^/public [NC]
+RewriteRule ^public/?(.*)$ https://%{HTTP_HOST}/ [R=301,L]
 
-    RewriteRule ^(.*)$ public/$1 [L]
-</IfModule>
-
-# -------------------------------
-# Remove index.php from URL
-# -------------------------------
+# Redirect index.php to main URL
 RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
-RewriteRule ^index\.php$ https://socialit.us/ [R=301,L]
+RewriteRule ^index\.php$ https://%{HTTP_HOST}/ [R=301,L]
 
-# -------------------------------
 # Force HTTPS and remove www
-# -------------------------------
 RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} ^www\. [NC]
-RewriteRule ^ https://socialit.us%{REQUEST_URI} [L,R=301]
-
-# -------------------------------
-# Laravel default rewrite
-# -------------------------------
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ public/index.php [L]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
