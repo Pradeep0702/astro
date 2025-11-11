@@ -1,18 +1,5 @@
-<!-- <IfModule mod_rewrite.c>
-    RewriteEngine On
-
-    RewriteRule ^(.*)$ public/$1 [L]
-</IfModule> -->
-
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Agar request "public" folder ke andar ka nahi hai to redirect kar do
-    RewriteCond %{REQUEST_URI} !^/public/
     RewriteRule ^(.*)$ public/$1 [L]
-
-    # Purane /public/ URLs ko redirect karo clean version par
-    RewriteCond %{THE_REQUEST} \s/public/([^\s?]*) [NC]
-    RewriteRule ^public/(.*)$ https://socialit.us/$1 [R=301,L]
 </IfModule>
