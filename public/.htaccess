@@ -70,10 +70,6 @@
 
 RewriteEngine On
 
-# Redirect "public" folder access to main URL
-RewriteCond %{REQUEST_URI} ^/public [NC]
-RewriteRule ^public/?(.*)$ https://%{HTTP_HOST}/ [R=301,L]
-
 # Redirect index.php to main URL
 RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
 RewriteRule ^index\.php$ https://%{HTTP_HOST}/ [R=301,L]
