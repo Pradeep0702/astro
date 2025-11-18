@@ -2234,7 +2234,14 @@
 	 background: var(--primary2Color);
 	 color: var(--bcolor);
 	 border-radius: var(--borderradius);
+	 font-weight:600;
+	 font-size:16px;
 }
+
+#faq .accordion-body{
+	 font-size:14px;
+}
+
  #faq .accordion-button:focus {
 	 box-shadow: none !important;
 }
