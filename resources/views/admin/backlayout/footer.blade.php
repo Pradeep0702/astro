@@ -24,20 +24,26 @@
 
 
     function textEditore() {
-    $('.summernoteService').summernote({
-        placeholder: 'Write Here',
-        tabsize: 2,
-        height: 120,
-        toolbar: [
-        ['style', ['bold', 'italic', 'underline', 'clear']],
-        ['color', ['color']],
-        ['para', ['ul', 'ol', 'paragraph']],
-        ['insert', ['link']],
-        ['view', ['undo', 'redo', 'codeview']]
-        ],
-    });
+            $('.summernoteService').summernote({
+                placeholder: 'Write Here',
+                tabsize: 2,
+                height: 120,
+                toolbar: [
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['insert', ['link']],
+                ['view', ['undo', 'redo', 'codeview']]
+                ],
+            });
     }
     textEditore()
+
+    $('.summernoteConent').summernote({
+        placeholder: 'Write Here',
+        tabsize: 2,
+        height: 120,     
+    });
 </script>
 @stack('js')
 <x-alert/>

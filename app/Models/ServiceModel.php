@@ -9,7 +9,7 @@ class ServiceModel extends Model
 {
     use HasFactory;
     protected $table = "service_page";
-    protected $fillable = ['cat_id','menu_name','menu_slug','meta_data','hero_section','info_card_section','page_banner_section','main_section','faq_section','main_category_page'];
+    protected $fillable = ['cat_id','menu_name','menu_slug','meta_data','hero_section','info_card_section','page_banner_section','main_section','faq_section','main_category_page','bottom_content'];
 
     protected $casts = [
         'meta_data' => 'json',
