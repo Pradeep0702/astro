@@ -2579,6 +2579,7 @@
  #bottom_content h5,
  #bottom_content h6 {
     font-size: 27px !important;
+	font-weight:600 !important;
  }
  
  #bottom_content p {
