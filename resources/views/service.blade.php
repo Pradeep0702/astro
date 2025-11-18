@@ -64,7 +64,7 @@
             <div class="container-fluid res-container">
                 <div class="row  mx-md-5 mx-lg-5 g-4">
                       <div class="col-12">
-                            {{$singlepageddata->bottom_content}}
+                            {!! $singlepageddata->bottom_content !!}
                       </div> 
                 </div>
             </div>
