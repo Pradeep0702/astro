@@ -116,6 +116,16 @@
                   </div>                          
             </div>
         </div> 
+         <div class="card mt-3">
+            <div class="card-header py-3"><h5>Bottom Content</h5></div>
+            <div class="card-body">             
+                <div class="row form-group">
+                    <div class="faq-dynamic-div pb-4" data-faqindex="1">
+                       <textarea name="bottom_content" class="form-control f-14 summernoteConent"></textarea>
+                    </div>                                         
+                </div>                
+            </div>
+         </div>
         <div class="card mt-3">
             <div class="card-header py-3"><h5>Page Banner Section</h5></div>
             <div class="card-body">             
@@ -161,16 +171,6 @@
             </div>
             <button class="btn btn-warning f-14 mb-2 mx-2" type="button" id="addmore">Add More</button>
          </div> 
-         <div class="card mt-3">
-            <div class="card-header py-3"><h5>Bottom Content</h5></div>
-            <div class="card-body">             
-                <div class="row form-group">
-                    <div class="faq-dynamic-div pb-4" data-faqindex="1">
-                       <textarea name="bottom_content" class="form-control f-14 summernoteConent"></textarea>
-                    </div>                                         
-                </div>                
-            </div>
-         </div>
          <div class="card mt-3">
             <div class="card-header py-3"><h5>Faq Section</h5></div>
             <div class="card-body">             
