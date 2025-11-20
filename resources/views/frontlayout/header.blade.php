@@ -1,7 +1,7 @@
 @php
-    $defaultTitle= 'web development company in kota - rajasathan';
-    $defaultDescription = 'web development company in kota - rajasathan';
-    $defaultKeywords = 'web development company in kota - rajasathan';
+    $defaultTitle= 'Hire the Best Digital Marketing Company & Agency in USA | Social IT';
+    $defaultDescription = 'Boost your online presence with Social IT — the best digital marketing company & agency in USA offering SEO, social media, PPC, and branding services for your business growth.';
+    $defaultKeywords = 'web development company USA, digital marketing agency USA, software development company USA, IT services USA, SEO services USA, social media marketing USA, mobile app development USA, software solutions USA, IT consulting USA, marketing consultant USA, branding agency USA, PPC advertising USA, email marketing services USA, content marketing agency USA, web design company USA, software outsourcing company USA, technology solutions USA, IT support services USA, creative marketing agency USA, software product company USA';
 @endphp
 <!DOCTYPE html>
 <html lang="en">

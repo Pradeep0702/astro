@@ -1,4 +1,6 @@
 @extends('frontlayout.mainlayout')
+@section('title','Hire the Best Digital Marketing Company & Agency in USA | Social IT')
+@section('description','Boost your online presence with Social IT — the best digital marketing company & agency in USA offering SEO, social media, PPC, and branding services for your business growth.')
 @section('section')
 <section id="hero-banner">
     <div class="container">
