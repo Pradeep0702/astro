@@ -280,7 +280,7 @@
         return faqdiv;
  }
 
-   let faqindex = 2;
+   let faqindex = {{ $faqindex + 1 }};
    $('#addmorefaq').click(function () {
             $('#faqgrp').append(faqdiv(faqindex));            
             faqindex++;             
