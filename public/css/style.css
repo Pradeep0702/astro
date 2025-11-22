@@ -1255,7 +1255,7 @@
 }
  .megamenu .list-group-item {
 	 background: transparent;
-	 font-size: 13px !important;
+	 font-size: 11px !important;
 }
 
 .megamenu .list-group-item:hover span{
@@ -1286,7 +1286,7 @@
 	text-transform: capitalize;
 	display: flex;
 	align-items: center;
-	font-size:12px;
+	font-size:11px;
 	font-weight: 500;
 }
 
