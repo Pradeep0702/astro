@@ -8,6 +8,7 @@ use App\Models\TestimonialModel;
 use App\Models\WorkcategoryModel;
 use App\Models\WorkModel;
 use Illuminate\Http\Request;
+use App\Models\ServiceCategoryModel;
 
 
 class HomeController extends Controller
@@ -81,4 +82,16 @@ class HomeController extends Controller
             abort('404');
         } 
      }
+
+     public function services(){ 
+        $categories = ServiceCategoryModel::with(['menu' => function ($query) {
+         $query->select('cat_id', 'menu_name', 'menu_slug','main_category_page');
+        }])->orderBy('order', 'ASC')->get();
+
+      //   dd($categories);
+     
+        return view('services',compact('categories'));
+     }
+
+
 }
