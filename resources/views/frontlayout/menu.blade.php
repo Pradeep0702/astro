@@ -17,10 +17,10 @@
                       <a class="nav-link dropdown-toggle" id="menuhovershow"  href="javscript:void(0)" >Services</a>
                       <div id="drop-show-menu" class="dropdown-menu megamenu" role="menu">
                           <div class="container-fluid">
-                                   <div class="row mx-md-5 mx-lg-5 row-cols-2 row-cols-lg-5">
+                                <div class="row mx-md-5 mx-lg-5 row-cols-2 row-cols-lg-5">
                                   @foreach (Helpers::categories() as $categorie)
                                   @php $mainMenu = $categorie->menu->firstWhere('main_category_page', 1); @endphp
-                                    <div class="col-md-3 col-lg-3 col-12">                                        
+                                    <div class="col">                                        
                                         <a href="{{ $mainMenu ? route('front.serviceurl', $mainMenu->menu_slug) : 'javascript:void(0)' }}"><div class="{{\Str::slug($categorie->category_name)}} category-box">{!!$categorie->category_icon !!} <div class="ms-2">{{$categorie->category_name}}</div></div></a>
                                         <ul class="list-group border-0">
                                             @foreach ($categorie->menu as $menu)
