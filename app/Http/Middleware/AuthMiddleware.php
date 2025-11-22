@@ -13,7 +13,7 @@ class AuthMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if(!Auth::guard('admin_login')->check()){
-               return redirect()->route('back.auth');
+               return redirect()->route('back.dashboard');
         } 
          return $next($request);
     }

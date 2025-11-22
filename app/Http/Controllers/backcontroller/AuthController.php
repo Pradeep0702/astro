@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller {
     
     public function index() {
+        if(Auth::guard('admin_login')->check()){
+            return redirect()->route('back.dashboard');
+        } 
         return view('admin/index');
     }
     public function emailauth(Request $request) {

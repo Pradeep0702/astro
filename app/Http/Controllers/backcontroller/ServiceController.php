@@ -66,8 +66,6 @@ class ServiceController extends Controller
                'center.*.subtitle' => 'nullable|string|max:255',
                'center.*.title' => 'nullable|string|max:255',
                'center.*.description' => 'nullable|string|max:500',
-
-               'bottom_content' => 'required|max:900',
                
            ],[
             'cat_id' => 'The Category filed is required',
