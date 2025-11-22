@@ -17,7 +17,7 @@
                       <a class="nav-link dropdown-toggle" id="menuhovershow"  href="javscript:void(0)" >Services</a>
                       <div id="drop-show-menu" class="dropdown-menu megamenu" role="menu">
                           <div class="container-fluid">
-                                <div class="row mx-md-3 mx-lg-3 row-cols-2 row-cols-lg-5">
+                                <div class="row mx-md-2 mx-lg-2 row-cols-2 row-cols-lg-5">
                                   @foreach (Helpers::categories() as $categorie)
                                   @php $mainMenu = $categorie->menu->firstWhere('main_category_page', 1); @endphp
                                     <div class="col">                                        
