@@ -12,10 +12,10 @@
    <div class="container-fluid res-container">
       <div class="row g-4">
         @foreach($categories as $index =>  $categorie)
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-3 col-md-3 col-12">
             <div class="service-card" data-bs-toggle="collapse" data-bs-target="#sub{{$index}}">
                 <div class="d-flex justify-content-between align-items-start">
-                    {!!$categorie->category_icon !!}
+                    <span>{!!$categorie->category_icon !!}</span>
                     <i class="bi bi-chevron-down toggle-icon"></i>
                 </div>
                 <div class="service-title" >{{$categorie->category_name}}</div>
