@@ -57,7 +57,7 @@
       </div>
   </nav>
   <div class="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-      <div class="offcanvas-body bg-mobile-menu" id="mobile-menu-nav">
+      <div class="offcanvas-body bg-mobile-menu h-100" id="mobile-menu-nav">
           <div class="accordion accordion-flush" id="accordionFlushExample">
             @foreach (Helpers::categories() as $key=>$categorie)
               <div class="accordion-item">
