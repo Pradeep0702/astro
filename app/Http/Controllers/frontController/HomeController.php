@@ -39,7 +39,7 @@ class HomeController extends Controller
      }
   
      public function getstarted(){
-       return view('gs');
+       return view('get-started');
      }
 
      public function webdevelopment(){

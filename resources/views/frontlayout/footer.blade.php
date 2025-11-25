@@ -50,3 +50,12 @@
         </div>
     </div>
 </section>
+ <div class="floating-container">
+        <a href="{{route('front.getstarted')}}" class="popup-bubble">
+            Get your free proposal!
+        </a>
+        <a href="{{route('front.getstarted')}}" class="profile-image">
+            👤
+        </a>
+</div>
+
