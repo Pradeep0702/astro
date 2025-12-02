@@ -168,7 +168,7 @@
                 <div class="row form-group">
                       <div class="col-md-12"> 
                         @foreach($editdata->main_section as $index => $sectionTitle)
-                           @if($sectionTitle['main_center_section_title'])
+                           @if(isset($sectionTitle['main_center_section_title']))
                               <x-form labelname="Title" name="main_center_section_title" :danger=false>
                                  <input type="text" value="{{$sectionTitle['main_center_section_title']}}" name="main_center_section_title" class="form-control f-14" placeholder="Title"/>
                               </x-form> 
