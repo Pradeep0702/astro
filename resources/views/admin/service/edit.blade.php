@@ -1,5 +1,5 @@
 @php
-$sectionindex=""; $faqindex=""
+$sectionindex=""; $faqindex="";
 $mainTitle = null;
 
 foreach ($editdata->main_section as $item) {
