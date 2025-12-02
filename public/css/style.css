@@ -2782,6 +2782,10 @@ body {
 	background-color: #f5f7fa;
 }
 
+#service-page #bottom_content {
+	margin-top:35px;
+}
+
 /* #service-page i {
 	 font-size: 45px !important;
 	 font-weight: 300;
