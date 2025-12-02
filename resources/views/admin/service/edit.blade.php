@@ -1,4 +1,14 @@
-@php $sectionindex=""; $faqindex=""; @endphp
+@php
+$sectionindex=""; $faqindex=""
+$mainTitle = null;
+
+foreach ($editdata->main_section as $item) {
+    if (isset($item['main_center_section_title'])) {
+        $mainTitle = $item['main_center_section_title'];
+        break;
+    }
+}
+@endphp
 <x-adminlayout title="Update Page"> 
     <div class="content-wrapper">
         <div>
@@ -166,16 +176,15 @@
             <div class="card-header py-3"><h5>Main Center Section Title</h5></div>
             <div class="card-body">             
                 <div class="row form-group">
-                      <div class="col-md-12"> 
-                        @foreach($editdata->main_section as $index => $sectionTitle)
-                           @if(isset($sectionTitle['main_center_section_title']))
-                              <x-form labelname="Title" name="main_center_section_title" :danger=false>
-                                 <input type="text" value="{{$sectionTitle['main_center_section_title']}}" name="main_center_section_title" class="form-control f-14" placeholder="Title"/>
-                              </x-form> 
-                           @break
-                           @endif
-                         @endforeach
-                      </div>                     
+                     <div class="col-md-12"> 
+                        <x-form labelname="Title" name="main_center_section_title" :danger=false>
+                           <input type="text"
+                                    value="{{ $mainTitle ?? '' }}"
+                                    name="main_center_section_title"
+                                    class="form-control f-14"
+                                    placeholder="Title"/>
+                        </x-form> 
+                     </div>                    
                 </div> 
             </div>
          </div> 
