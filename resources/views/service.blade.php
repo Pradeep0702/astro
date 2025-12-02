@@ -25,6 +25,15 @@ foreach ($singlepageddata->main_section as $item) {
    @section('title',$singlepageddata->meta_data['title'])
    @section('description',$singlepageddata->meta_data['des'])
    @section('keywords',$singlepageddata->meta_data['keywords'])
+   <section id="bottom_content">
+      <div class="container-fluid res-container">
+         <div class="row  mx-md-5 mx-lg-5 g-4">
+            <div class="col-12">
+               {!! $singlepageddata->bottom_content !!}
+            </div>
+         </div>
+      </div>
+   </section>
    <section id="service-inner-page-2nd" class="ptb">
       <div class="container-fluid res-container">
          <div class="row mx-md-5 mx-lg-5 g-4">
@@ -36,7 +45,7 @@ foreach ($singlepageddata->main_section as $item) {
                </div>
             </div>
             <div class="col-md-7">
-               <p style="white-space: normal;">    {!! html_entity_decode(strip_tags(html_entity_decode($singlepageddata->page_banner_section['description']))) !!}</p>
+               <p style="white-space: normal;">{!! html_entity_decode(strip_tags(html_entity_decode($singlepageddata->page_banner_section['description']))) !!}</p>
             </div>
          </div>
       </div>
@@ -70,15 +79,6 @@ foreach ($singlepageddata->main_section as $item) {
                   <button class="reviews-prev"><i class="bi bi-arrow-left"></i></button>
                   <button class="reviews-next"><i class="bi bi-arrow-right"></i></button>
                </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <section id="bottom_content">
-      <div class="container-fluid res-container">
-         <div class="row  mx-md-5 mx-lg-5 g-4">
-            <div class="col-12">
-               {!! $singlepageddata->bottom_content !!}
             </div>
          </div>
       </div>
