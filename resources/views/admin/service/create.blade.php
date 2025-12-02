@@ -148,6 +148,18 @@
             </div>
          </div>
          <div class="card mt-3">
+            <div class="card-header py-3"><h5>Main Center Section Title</h5></div>
+            <div class="card-body">             
+                <div class="row form-group">
+                      <div class="col-md-12"> 
+                        <x-form labelname="Title" name="main_center_section_title" :danger=false>
+                            <input type="text" name="main_center_section_title" class="form-control f-14" placeholder="Title"/>
+                         </x-form> 
+                      </div>                     
+                </div> 
+            </div>
+         </div> 
+         <div class="card mt-3">
             <div class="card-header py-3"><h5>Main Center Section</h5></div>
             <div class="card-body" id="divmain">             
                 <div class="row form-group mb-4 dynamic-group" data-index="1">

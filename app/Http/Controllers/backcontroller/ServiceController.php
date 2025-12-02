@@ -79,6 +79,10 @@ class ServiceController extends Controller
                 
             $main_section=[];
             $faq_section=[];
+
+            $main_section[] = [
+                "main_center_section_title" => $request->main_center_section_title
+            ];
          
             foreach($request->center as $data){
                 $filename = isset($data['banner_image']) ? fileupload('service', $data['banner_image']) : "";
@@ -174,6 +178,10 @@ class ServiceController extends Controller
         try{            
         $main_section = [];
         $faq_section = [];
+        
+        $main_section[] = [
+            "main_center_section_title" => $request->main_center_section_title
+        ];
         
         foreach ($request->faq as $data) {
             $faq_section[] = [

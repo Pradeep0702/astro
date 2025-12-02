@@ -163,25 +163,45 @@
             </div>
          </div>
          <div class="card mt-3">
+            <div class="card-header py-3"><h5>Main Center Section Title</h5></div>
+            <div class="card-body">             
+                <div class="row form-group">
+                      <div class="col-md-12"> 
+                        @foreach($editdata->main_section as $index => $sectionTitle)
+                           @if($sectionTitle['main_center_section_title'])
+                              <x-form labelname="Title" name="main_center_section_title" :danger=false>
+                                 <input type="text" value="{{$sectionTitle['main_center_section_title']}}" name="main_center_section_title" class="form-control f-14" placeholder="Title"/>
+                              </x-form> 
+                           @break
+                           @endif
+                         @endforeach
+                      </div>                     
+                </div> 
+            </div>
+         </div> 
+         <div class="card mt-3">
             <div class="card-header py-3"><h5>Main Center Section</h5></div>
             <div class="card-body" id="divmain">             
-                @foreach($editdata->main_section as $index => $section)
-                @php $sectionindex=$index+1; @endphp                
-                <div class="row form-group mb-4 dynamic-group  {{$sectionindex > 1 ? 'border-top border-primary pt-4 pb-4' : ''}}" data-index="{{$index+1}}">
+               @foreach($editdata->main_section as $index => $section)
+                   @if(isset($section['main_center_section_title']))
+                     @continue
+                   @endif
+               @php $sectionindex=$index+1; @endphp                
+                <div class="row form-group mb-4 dynamic-group  {{$sectionindex > 2 ? 'border-top border-primary pt-4 pb-4' : ''}}" data-index="{{$index+1}}">
                       <div class="col-md-6"> 
                         <x-form labelname="Sub Title" name="center_1_subtitle" :danger=false>
-                            <input value="{{$section['subtitle']}}" type="text" name="center[{{$index+1}}][subtitle]" class="form-control f-14" placeholder="Sub Title"/>
+                            <input value="{{$section['subtitle'] ?? ''}}" type="text" name="center[{{$index+1}}][subtitle]" class="form-control f-14" placeholder="Sub Title"/>
                          </x-form>                                           
                           <x-form labelname="Title" name="center_1_title" :danger=false>
-                             <input value="{{$section['title']}}" type="text" name="center[{{$index+1}}][title]" class="form-control f-14" placeholder="Title"/>
+                             <input value="{{$section['title'] ?? ''}}" type="text" name="center[{{$index+1}}][title]" class="form-control f-14" placeholder="Title"/>
                           </x-form>                         
                           <x-form labelname="Description" name="center_1_description" :danger=false>                         
-                             <textarea name="center[{{$index+1}}][description]" class="summernoteService form-control f-14">{{$section['description']}}</textarea>
+                             <textarea name="center[{{$index+1}}][description]" class="summernoteService form-control f-14">{{$section['description'] ?? ''}}</textarea>
                           </x-form>
                       </div> 
                       <div class="col-md-6">
                         <x-form labelname="Banner Image" name="banner_image_1" :danger=false>
-                            <input data-default-file="{{asset('upload/'.$section['image'])}}" type="file" class="form-control file" name="center[{{$index+1}}][banner_image]">
+                            <input data-default-file="{{ isset($section['image']) ? asset('upload/'.$section['image']) : '' }}" type="file" class="form-control file" name="center[{{$index+1}}][banner_image]">
                          </x-form>   
                       </div> 
                       @if($sectionindex > 1)
