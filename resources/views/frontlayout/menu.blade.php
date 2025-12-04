@@ -47,7 +47,7 @@
               </ul>
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                      <a class="nav-link contact-us" href="{{ route('front.contact') }}"><i class="bi bi-telephone-fill"></i> +91-88244-67277</a>
+                      <a class="nav-link contact-us" href="{{ route('front.contact') }}"><i class="bi bi-telephone-fill"></i> {{config('constant.phone')}}</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link demo" href="{{route('front.getstarted')}}">Get Started</a>
